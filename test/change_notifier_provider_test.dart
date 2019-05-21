@@ -31,10 +31,10 @@ void main() {
       var child2 = Container();
       final clone = provider.cloneWithChild(child2);
 
-      expect(clone.child, child2);
-      expect(clone.key, provider.key);
-      expect(clone.builder, provider.builder);
-      expect(clone.value, provider.value);
+      expect(clone.child, equals(child2));
+      expect(clone.key, equals(provider.key));
+      expect(clone.builder, equals(provider.builder));
+      expect(clone.value, equals(provider.value));
     });
     test('works with MultiProvider #3', () {
       final provider = ChangeNotifierProvider<ChangeNotifier>(
@@ -45,10 +45,10 @@ void main() {
       var child2 = Container();
       final clone = provider.cloneWithChild(child2);
 
-      expect(clone.child, child2);
-      expect(clone.key, provider.key);
-      expect(clone.builder, provider.builder);
-      expect(clone.value, provider.value);
+      expect(clone.child, equals(child2));
+      expect(clone.key, equals(provider.key));
+      expect(clone.builder, equals(provider.builder));
+      expect(clone.value, equals(provider.value));
     });
     group('default constructor', () {
       testWidgets('pass down key', (tester) async {

@@ -31,11 +31,11 @@ void main() {
       var child2 = Container();
       final clone = provider.cloneWithChild(child2);
 
-      expect(clone.child, child2);
-      expect(clone.key, provider.key);
-      expect(clone.builder, provider.builder);
-      expect(clone.value, provider.value);
-      expect(clone.builder, provider.builder);
+      expect(clone.child, equals(child2));
+      expect(clone.key, equals(provider.key));
+      expect(clone.builder, equals(provider.builder));
+      expect(clone.value, equals(provider.value));
+      expect(clone.builder, equals(provider.builder));
     });
     test('works with MultiProvider #3', () {
       final provider = ListenableProvider<ChangeNotifier>(
@@ -47,11 +47,11 @@ void main() {
       var child2 = Container();
       final clone = provider.cloneWithChild(child2);
 
-      expect(clone.child, child2);
-      expect(clone.key, provider.key);
-      expect(clone.builder, provider.builder);
-      expect(clone.value, provider.value);
-      expect(clone.builder, provider.builder);
+      expect(clone.child, equals(child2));
+      expect(clone.key, equals(provider.key));
+      expect(clone.builder, equals(provider.builder));
+      expect(clone.value, equals(provider.value));
+      expect(clone.builder, equals(provider.builder));
     });
 
     group('value constructor', () {
