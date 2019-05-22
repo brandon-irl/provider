@@ -1,6 +1,15 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/src/adaptive_builder_widget.dart';
+
+part 'async_provider.dart';
+part 'change_notifier_provider.dart';
+part 'consumer.dart';
+part 'listenable_provider.dart';
+part 'proxy_provider.dart';
+part 'value_listenable_provider.dart';
 
 /// A function that disposes of [value].
 typedef Disposer<T> = void Function(BuildContext context, T value);
